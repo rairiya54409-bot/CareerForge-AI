@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-bg: #faf9fc;
+  --color-surface: #ffffff;
+  --color-primary: #8b7cf6;
+  --color-primary-dark: #6f61d9;
+  --color-primary-soft: #f0edff;
+
+  --color-yellow: #f6d978;
+  --color-yellow-soft: #fff8d9;
+
+  --color-text: #24212d;
+  --color-text-secondary: #716d7d;
+  --color-text-muted: #9a96a6;
+
+  --color-border: #e9e5f0;
+
+  --color-success: #52a675;
+  --color-danger: #d95c6a;
+
+  --sidebar-width: 250px;
+  --header-height: 72px;
+
+  font-family: 'Inter', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-container {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.page-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.primary-button {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 18px;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.primary-button:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.secondary-button {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 11px 18px;
+  background: white;
+  color: var(--color-text);
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.secondary-button:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary-dark);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --sidebar-width: 0px;
+  }
+
+  .page-container {
+    padding: 24px 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-container {
+    padding: 18px 14px;
+  }
+
+  .card {
+    padding: 18px;
+    border-radius: 14px;
+  }
+}

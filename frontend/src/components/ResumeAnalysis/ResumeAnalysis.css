@@ -1,0 +1,241 @@
+.resume-analysis-page {
+  padding-bottom: 50px;
+}
+
+.analysis-page-header {
+  margin-bottom: 28px;
+}
+
+.analysis-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  padding: 0;
+  margin-bottom: 22px;
+}
+
+.analysis-back-button:hover {
+  color: var(--color-primary-dark);
+}
+
+.analysis-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--color-primary-dark);
+  background: var(--color-primary-soft);
+  border-radius: 999px;
+  padding: 7px 11px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.analysis-page-header h1 {
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: -1px;
+}
+
+.analysis-page-header p {
+  max-width: 720px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+
+/* Score cards */
+
+.analysis-score-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.analysis-score-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.analysis-score-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+  flex-shrink: 0;
+}
+
+.analysis-score-label {
+  display: block;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.analysis-score-value {
+  display: block;
+  font-size: 25px;
+}
+
+.analysis-score-description {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+
+/* Analysis sections */
+
+.analysis-content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.analysis-section-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.analysis-section-card h2 {
+  font-size: 17px;
+  margin: 0 0 17px;
+}
+
+.analysis-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.analysis-list li {
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  margin-bottom: 9px;
+}
+
+.analysis-skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.analysis-skill-tag {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+  border-radius: 999px;
+  padding: 7px 11px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.analysis-empty {
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+
+/* Loading */
+
+.analysis-loading {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.analysis-loading h2 {
+  margin: 18px 0 6px;
+}
+
+.analysis-loading p {
+  color: var(--color-text-secondary);
+}
+
+.analysis-spinner {
+  color: var(--color-primary);
+  animation: analysis-spin 1s linear infinite;
+}
+
+@keyframes analysis-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Error */
+
+.analysis-error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 65vh;
+}
+
+.analysis-error-card {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  padding: 35px;
+}
+
+.analysis-error-card > svg {
+  color: var(--color-danger);
+}
+
+.analysis-error-card h2 {
+  margin: 15px 0 8px;
+}
+
+.analysis-error-card p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.analysis-error-card button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 850px) {
+  .analysis-score-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analysis-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analysis-page-header h1 {
+    font-size: 30px;
+  }
+}

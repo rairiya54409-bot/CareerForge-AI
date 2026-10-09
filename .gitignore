@@ -1,0 +1,33 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Frontend dependencies and build output
+node_modules/
+dist/
+.vite/
+
+# Uploaded resumes and user data
+backend/app/uploads/
+uploads/
+*.sqlite3
+*.db
+
+# Logs and editor files
+*.log
+.vscode/
+.DS_Store
+
+# Python packaging
+build/
+*.egg-info/

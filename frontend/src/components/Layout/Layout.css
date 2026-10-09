@@ -1,0 +1,267 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 14px 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 2px 10px 28px;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: white;
+  box-shadow: 0 5px 15px rgba(139, 124, 246, 0.25);
+}
+
+.brand-name {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.brand-ai {
+  display: inline-block;
+  margin-top: 2px;
+  color: var(--color-primary);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* Navigation */
+
+.navigation {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.nav-group {
+  margin-bottom: 22px;
+}
+
+.nav-section-title {
+  padding: 0 12px;
+  margin-bottom: 7px;
+  color: var(--color-text-muted);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-item {
+  width: 100%;
+  min-height: 42px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  margin-bottom: 3px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.18s ease;
+}
+
+.nav-item:hover {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+}
+
+.nav-item.active {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
+.nav-item.active svg {
+  color: var(--color-primary);
+}
+
+/* Sidebar bottom */
+
+.sidebar-bottom {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border);
+}
+
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 10px 3px;
+}
+
+.profile-avatar,
+.topbar-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-yellow-soft);
+  color: #806b1f;
+  border: 1px solid #f2e5a8;
+}
+
+.profile-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.profile-info strong {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profile-info span {
+  margin-top: 2px;
+  color: var(--color-text-muted);
+  font-size: 10px;
+}
+
+/* Main */
+
+.main-area {
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar {
+  height: var(--header-height);
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+}
+
+.topbar-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: white;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.18s ease;
+}
+
+.icon-button:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.topbar-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.content-area {
+  min-height: calc(100vh - var(--header-height));
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 72px;
+    min-width: 72px;
+    padding: 18px 9px;
+  }
+
+  .brand {
+    justify-content: center;
+    padding: 2px 0 24px;
+  }
+
+  .brand > div:last-child,
+  .nav-section-title,
+  .nav-item span,
+  .profile-info {
+    display: none;
+  }
+
+  .nav-item {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .sidebar-profile {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .sidebar-bottom > .nav-item {
+    margin-bottom: 8px;
+  }
+
+  .topbar {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+
+  .topbar {
+    height: 64px;
+    padding: 0 15px;
+  }
+}
